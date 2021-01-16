@@ -1,0 +1,60 @@
+﻿<Window x:Class="Crawl_Data_Chiasenhac.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Crawl_Data_Chiasenhac"
+        mc:Ignorable="d"
+        
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="Crawl Music" Height="auto" Width="720">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Name="btnBXHVN"
+                    Click="btnBXHVN_Click"
+                Style="{StaticResource MaterialDesignFlatButton}"
+                ToolTip="Bảng xếp hạng Việt Nam" Content="BXH Việt Nam">
+            </Button>
+            <Button Grid.Column="1" Name="btnBXHUS"
+                    Click="btnBXHUS_Click"
+                Style="{StaticResource MaterialDesignFlatButton}"
+                ToolTip="Bảng xếp hạng Âu Mỹ" Content="BXH US-UK">
+            </Button>
+            <Button Grid.Column="2" Name="btnBXHKO"
+                    Click="btnBXHKO_Click"
+                Style="{StaticResource MaterialDesignFlatButton}"
+                ToolTip="Bảng xếp hạng Hàn Quốc" Content="BXH Hàn Quốc">
+            </Button>
+            <Button Grid.Column="3" Name="btnBXHJA"
+                    Click="btnBXHKO_Click"
+                Style="{StaticResource MaterialDesignFlatButton}"
+                ToolTip="Bảng xếp hạng Hàn Quốc" Content="BXH Nhật Bản">
+            </Button>
+        </Grid>
+        <Grid Grid.Row="1" Margin="10">
+            <ScrollViewer Name="scrollContent"
+                VerticalScrollBarVisibility="Hidden">
+                <StackPanel Name="stackContent">
+
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Window>
